@@ -292,7 +292,7 @@ response of the fetch request and then adding it to the cache, like below.</p>
 
         return fetch(fetchRequest).then(
           function(response) {
-            // Check if we received a valid response
+            // Return early if we receive an invalid response
             if(!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
